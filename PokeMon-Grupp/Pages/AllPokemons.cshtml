@@ -1,9 +1,11 @@
 ﻿@page
 @using PokeMon_Grupp.Model
+@using PokeMon_Grupp.Managers
 @model PokeMon_Grupp.Pages.AllPokemonsModel
 @{
 }
-@foreach (var pokemon in PokemonModel.AllGen1Pokemons)
+
+@foreach (var pokemon in PokemonManager.AllGen1Pokemons)
 {
 	
 }
