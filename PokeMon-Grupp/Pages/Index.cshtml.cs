@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PokeMon_Grupp.Api;
 
 namespace PokeMon_Grupp.Pages
 {
@@ -12,9 +13,10 @@ namespace PokeMon_Grupp.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public async void OnGet()
         {
-
+            ApiCaller APi = new ApiCaller();
+            await APi.GetPokemon("arbok");
         }
     }
 }

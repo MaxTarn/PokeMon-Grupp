@@ -1,4 +1,8 @@
-﻿namespace PokeMon_Grupp.Api
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using PokeMon_Grupp.Model;
+
+namespace PokeMon_Grupp.Api
 {
     public class ApiCaller
     {
@@ -11,24 +15,24 @@
             //Lägg till en basadress till klienten, eftersom alla calls komemr gå till den sidan.
             Client.BaseAddress = new Uri("https://pokeapi.co/api/v2/pokemon/");
         }
-        public async Task<Root> MakeCall(string url)
-        {
-            HttpResponseMessage response = await Client.GetAsync(url);
+        //public async Task<Root> MakeCall(string url)
+        //{
+        //    HttpResponseMessage response = await Client.GetAsync(url);
 
-            if (response.IsSuccessStatusCode)
-            {
-                string json = await response.Content.ReadAsStringAsync();
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        string json = await response.Content.ReadAsStringAsync();
 
-                Root? result = JsonConvert.DeserializeObject<Root>(json);
-                if (result != null)
-                {
-                    return result;
-                }
+        //        Root? result = JsonConvert.DeserializeObject<Root>(json);
+        //        if (result != null)
+        //        {
+        //            return result;
+        //        }
 
-            }
+        //    }
 
-            throw new HttpRequestException();
-        }
+        //    throw new HttpRequestException();
+        //}
 
         public async Task<string?> GetPokemonData(string pokemonName)
         {
@@ -41,6 +45,21 @@
             return null;
         }
 
+        public async Task<PokemonModel?> GetPokemon(string pokemonName)
+        {
+            HttpResponseMessage response = await Client.GetAsync(pokemonName);
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
+                PokemonModel? pokemon = JsonConvert.DeserializeObject<PokemonModel>(json);
+                Console.Write(pokemon);
+                return pokemon;
+
+            }
+
+            return null;
+
+        }
 
     }
 }
