@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeMon-Grupp", "PokeMon-Grupp\PokeMon-Grupp.csproj", "{6E22F238-F265-4610-830C-CE86B286DD45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeMon-Grupp", "PokeMon-Grupp\PokeMon-Grupp.csproj", "{6E22F238-F265-4610-830C-CE86B286DD45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
