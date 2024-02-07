@@ -1,20 +1,31 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PokeMon_Grupp.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
+        // public string? ErrorMessage { get; set; }
+        public enum PokemonGen1;
         public void OnGet()
         {
 
+
+
+
+
+
+
+
+            //try
+            //{
+            //    //  Root result = await new ApiCaller().MakeCall("users");
+
+            //    // Users = result.Users;
+            //}
+            //catch (Exception ex)
+            //{
+            //    ErrorMessage = ex.Message;
+            //}
         }
     }
 }
