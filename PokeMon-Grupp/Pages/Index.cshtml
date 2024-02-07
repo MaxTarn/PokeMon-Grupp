@@ -8,7 +8,11 @@
 <div class="text-center">
 @foreach (PokemonGen1 pokemon in Enum.GetValues(typeof(PokemonGen1)))
 {
-    <a class="text-danger" asp-page="/details">@pokemon</a>
+    //kalla på apicaller method 
+    //får tillbaka data om pokemonnen 
+    //displaya data med a tag
+
+    <a class="text-danger" asp-page="/details" asp-route-pokemon="">@pokemon</a>
     <br />
 }
 </div>
