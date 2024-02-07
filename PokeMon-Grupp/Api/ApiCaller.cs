@@ -1,4 +1,8 @@
-﻿namespace PokeMon_Grupp.Api
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using PokeMon_Grupp.Model;
+
+namespace PokeMon_Grupp.Api
 {
     public class ApiCaller
     {
@@ -41,6 +45,21 @@
             return null;
         }
 
+        public async Task<PokemonModel?> GetPokemon(string pokemonName)
+        {
+            HttpResponseMessage response = await Client.GetAsync(pokemonName);
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
+                PokemonModel? pokemon = JsonConvert.DeserializeObject<PokemonModel>(json);
+                Console.Write(pokemon);
+                return pokemon;
+
+            }
+
+            return null;
+
+        }
 
     }
 }
