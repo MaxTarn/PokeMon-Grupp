@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using PokeMon_Grupp.Api;
 using PokeMon_Grupp.Model;
 
+
 namespace PokeMon_Grupp.Pages
 {
 	public class IndexModel : PageModel
@@ -15,6 +16,7 @@ namespace PokeMon_Grupp.Pages
 			{
 				PokemonModel result = await new ApiCaller().GetPokemonData("name");
 
+=======
 				// Pokemon = result.Pokemon;
 			}
 			catch (Exception ex)
@@ -23,4 +25,5 @@ namespace PokeMon_Grupp.Pages
 			}
 		}
 	}
+>>>>>>> master
 }
