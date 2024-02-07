@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PokeMon_Grupp.Api;
-using PokeMon_Grupp.Model;
 
 
 namespace PokeMon_Grupp.Pages
@@ -10,10 +9,13 @@ namespace PokeMon_Grupp.Pages
         public string? ErrorMessage { get; set; }
         public enum PokemonGen1;
 
-        public void OnGet()
-        {
+        public void OnGet(){}
 
-        }
+
+
+
+      
+           
     }
 
 }
