@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PokeMon_Grupp.Model;
 
 namespace PokeMon_Grupp.Pages
 {
-	public class DetailsModel : PageModel
-	{
-		public int MyProperty { get; set; }
-		public void OnGet(PokemonModel pokemon)
-		{
+    public class DetailsModel : PageModel
+    {
 
-		}
-	}
+        public void OnGet(string pokemonName)
+        {
+            Console.WriteLine(pokemonName);
+        }
+    }
 }
