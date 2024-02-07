@@ -30,6 +30,16 @@
             throw new HttpRequestException();
         }
 
+        public async Task<string?> GetPokemonData(string pokemonName)
+        {
+            HttpResponseMessage response = await Client.GetAsync(pokemonName);
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
+                return json;
+            }
+            return null;
+        }
 
 
     }
