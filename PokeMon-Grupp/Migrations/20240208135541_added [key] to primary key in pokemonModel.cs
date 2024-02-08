@@ -5,7 +5,7 @@
 namespace PokeMon_Grupp.Migrations
 {
     /// <inheritdoc />
-    public partial class initialcreate : Migration
+    public partial class addedkeytoprimarykeyinpokemonModel : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

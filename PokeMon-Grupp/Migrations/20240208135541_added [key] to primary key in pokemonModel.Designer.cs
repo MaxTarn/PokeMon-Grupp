@@ -11,8 +11,8 @@ using PokeMon_Grupp.Database;
 namespace PokeMon_Grupp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240208130908_initialcreate")]
-    partial class initialcreate
+    [Migration("20240208135541_added [key] to primary key in pokemonModel")]
+    partial class addedkeytoprimarykeyinpokemonModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

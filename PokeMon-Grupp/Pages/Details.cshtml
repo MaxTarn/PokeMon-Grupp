@@ -5,17 +5,17 @@
 }
 
 <div>
-
+    
+    
     @if (Model.Pokemon != null)
     {
         <h2>@Model.Pokemon.name</h2>
         <p>Weight: @Model.Pokemon.weight</p>
         <p>Height: @Model.Pokemon.height</p>
-        
-        
     }
     else
     {
         <p>Pokemon not found.</p>
+        <p>Debug Info: @Model.Pokemon</p>
     }
 </div>
