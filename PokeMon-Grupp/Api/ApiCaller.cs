@@ -47,6 +47,7 @@ namespace PokeMon_Grupp.Api
 
         public async Task<PokemonModel?> GetPokemon(string pokemonName)
         {
+            pokemonName = pokemonName.ToLower().Trim().TrimEnd().TrimStart();
             HttpResponseMessage response = await Client.GetAsync(pokemonName);
             if (response.IsSuccessStatusCode)
             {
