@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PokeMon_Grupp.Api;
 
-
 namespace PokeMon_Grupp.Pages
 {
     public class IndexModel : PageModel
@@ -13,9 +12,7 @@ namespace PokeMon_Grupp.Pages
 
 
 
-
       
            
     }
-
 }
