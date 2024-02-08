@@ -1,0 +1,27 @@
+﻿@page
+@using PokeMon_Grupp.Managers
+@model PokeMon_Grupp.Pages.AllPokemonsChosenModel
+
+@{
+}
+
+<div>
+
+     @if (PokemonManager.AllPokemonsChosen.Count>0)
+     {
+         @foreach (var pokemon in PokemonManager.AllPokemonsChosen)
+         {
+             <div>
+                 <h2>@pokemon.name</h2>
+                 <p>Weight: @pokemon.weight</p>
+                 <p>Height: @pokemon.height</p>
+             </div>
+        
+         }
+     }
+     else
+     {
+         <h1>You have not chosen any pokemons</h1>
+     }
+
+</div>

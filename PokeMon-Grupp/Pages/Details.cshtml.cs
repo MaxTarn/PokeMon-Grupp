@@ -16,8 +16,13 @@ namespace PokeMon_Grupp.Pages
             ApiCaller ApiCalls = new ApiCaller();
             Pokemon = await ApiCalls.GetPokemon(pokemonName);
             Console.WriteLine(Pokemon.name);
-            PokemonManager.AllPokemonsChosen.Add(Pokemon);
 
+            //adds the pokemon chsoen to the pokemon chsoen list, and if user has already chosen that pokemon, it does not add the pokemon the the chosen pokemon list
+            PokemonModel? pokemonInList = PokemonManager.AllPokemonsChosen.FirstOrDefault(pokemon => pokemon == Pokemon);
+            if (pokemonInList == null)
+            {
+                PokemonManager.AllPokemonsChosen.Add(Pokemon);
+            }
 
 
         }
