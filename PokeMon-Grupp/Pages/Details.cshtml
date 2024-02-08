@@ -1,4 +1,21 @@
 ﻿@page
 @model PokeMon_Grupp.Pages.DetailsModel
 @{
+
 }
+
+<div>
+
+    @if (Model.Pokemon != null)
+    {
+        <h2>@Model.Pokemon.name</h2>
+        <p>Weight: @Model.Pokemon.weight</p>
+        <p>Height: @Model.Pokemon.height</p>
+        
+        
+    }
+    else
+    {
+        <p>Pokemon not found.</p>
+    }
+</div>

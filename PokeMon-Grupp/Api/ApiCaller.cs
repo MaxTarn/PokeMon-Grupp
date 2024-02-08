@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using PokeMon_Grupp.Model;
+using System.Text.Json.Serialization;
 
 namespace PokeMon_Grupp.Api
 {
@@ -34,16 +34,7 @@ namespace PokeMon_Grupp.Api
         //    throw new HttpRequestException();
         //}
 
-        public async Task<string?> GetPokemonData(string pokemonName)
-        {
-            HttpResponseMessage response = await Client.GetAsync(pokemonName);
-            if (response.IsSuccessStatusCode)
-            {
-                string json = await response.Content.ReadAsStringAsync();
-                return json;
-            }
-            return null;
-        }
+
 
         public async Task<PokemonModel?> GetPokemon(string pokemonName)
         {
