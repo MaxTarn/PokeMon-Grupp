@@ -18,6 +18,6 @@ namespace PokeMon_Grupp.Pages
 
 
 
-        
+        }
     }
 }
