@@ -27,6 +27,7 @@ namespace PokeMon_Grupp.Api
             {
                 string json = await response.Content.ReadAsStringAsync();
                 PokemonModel? pokemon = JsonConvert.DeserializeObject<PokemonModel>(json);
+                pokemon.id = 0;
                 Console.Write(pokemon);
                 return pokemon;
 

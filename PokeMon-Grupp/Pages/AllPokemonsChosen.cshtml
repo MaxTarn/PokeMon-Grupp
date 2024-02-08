@@ -7,9 +7,9 @@
 
 <div>
 
-     @if (PokemonManager.AllPokemonsChosen.Count>0)
-     {
-         @foreach (var pokemon in PokemonManager.AllPokemonsChosen)
+   
+     
+         @foreach (var pokemon in Model.Pokemons)
          {
              <div>
                  <h2>@pokemon.name</h2>
@@ -18,10 +18,5 @@
              </div>
         
          }
-     }
-     else
-     {
-         <h1>You have not chosen any pokemons</h1>
-     }
 
 </div>
